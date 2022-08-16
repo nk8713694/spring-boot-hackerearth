@@ -40,6 +40,7 @@ public class Sim_card_noServiceImpl implements  Sim_card_noService{
         sim_card_no.setTelecom_provider(sim_card_noDetails.getTelecom_provider());
         sim_card_no.setState_of_registration(sim_card_noDetails.getState_of_registration());
         sim_card_no.setStatus(sim_card_noDetails.getStatus());
+        sim_card_noRepository.save(sim_card_no);
         return sim_card_no;
     }
 
