@@ -6,6 +6,7 @@ import com.verifone.springbootverifone.exception.ResourceNotFoundException;
 import com.verifone.springbootverifone.model.Sim_card_no;
 import com.verifone.springbootverifone.repository.Sim_card_noRepository;
 import com.verifone.springbootverifone.service.Sim_card_noService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,7 @@ public class Sim_card_noController {
 	Sim_card_noService sim_card_noService;
 
 	@GetMapping("/")
+	@ApiOperation("Returns ok response .")
 	public ResponseEntity<HttpStatus> getOkResponse() {
 		log.info("default page");
 		return new ResponseEntity<>(HttpStatus.OK);
